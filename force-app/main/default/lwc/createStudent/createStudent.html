@@ -1,0 +1,52 @@
+<template>
+    <lightning-card icon-name="standard:record_create" title="Register new student">
+        <lightning-record-edit-form object-api-name="Student__c">
+            <div class="slds-p-around_medium">
+            
+                <lightning-input 
+                    label="First name" 
+                    value={studentFirstName} 
+                    onchange={handleStudentFirstNameChange}>
+                </lightning-input>
+        
+                <lightning-input 
+                    label="Surname" 
+                    value={studentSurname} 
+                    onchange={handleStudentSurnameChange}>
+                </lightning-input>
+
+                <lightning-input 
+                    label="National Identification Number (EMŠO)" 
+                    value={studentEmso} 
+                    onchange={handleStudentEmsoChange}>
+                </lightning-input>
+
+                <lightning-combobox
+                    name="studentTypeOfStudy"
+                    label="Type of study"
+                    value={studentTypeOfStudyChoice}
+                    options={studentTypeOfStudyOptions}
+                    onchange={handleStudentTypeOfStudyChange}>
+                </lightning-combobox>
+            
+                <lightning-checkbox-group
+                    if:true={isPartTimeStudent}
+                    name="studentPayer"
+                    value={studentPayerChoice}
+                    options={studentPayerOption}
+                    onchange={handleStudentPayerChange}>
+                </lightning-checkbox-group>
+                
+                <div class="slds-m-top_medium slds-text-align_left">
+                    <lightning-button
+                        label="Save"
+                        onclick={handleSaveStudent}
+                        variant="brand"
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
