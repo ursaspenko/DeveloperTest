@@ -1,18 +1,24 @@
-# Salesforce DX Project: Next Steps
+# Test for candidates - developer
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Brief description of each task.
 
-## How Do You Plan to Deploy Your Changes?
+## Level 1
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Four custom objects were created (each with additional custom fields):
+- Student
+- Exam
+- Subject
+- Lecturer
 
-## Configure Your Salesforce DX Project
+## Level 2
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+Created a custom LWC component for registering new students (adding instance of Student object) with required fields, validation is only done on EMŠO field.
+The component is displayed on [Home](https://agilcon-6f-dev-ed.develop.lightning.force.com/lightning/page/home) page of Sales app additionally with a list of all students.
 
-## Read All About It
+## Level 3
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+EMŠO validation is done through an API call and if unsuccessful, record is not created. API response is displayed in a browser console after saving.
+
+## Level 4
+
+Created new custom LWC component for listing students attending selected exam. The component is added to exam record page layout along with a related list of students and exam details. On the component attendee can be deregistered from exam (hence title "Deregister student from this exam").
