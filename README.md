@@ -4,11 +4,14 @@ Brief description of each task.
 
 ## Level 1
 
-Four custom objects were created (each with additional custom fields):
+Five custom objects were created (each with additional custom fields):
 - Student
 - Exam
+- Exam Attendee
 - Subject
 - Lecturer
+
+Exam Attendee is a junction object to resolve many-to-many relationship between Exam and Student objects. Additionally object Lecturer was created for broader data presentation.
 
 ## Level 2
 
